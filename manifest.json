@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "News Details",
+  "version": "1.0",
+  "permissions": ["storage", "activeTab", "notifications"],
+  "web_accessible_resources": [
+    {
+      "resources": ["icons/search.png"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.npr.org/*"],
+      "js": ["content.js"],
+      "css": ["styles/content.css"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icons/icon.png"
+  }
+}
