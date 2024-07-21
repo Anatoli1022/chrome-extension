@@ -29,7 +29,7 @@ articles.forEach((article) => {
         popup.style.display = 'block';
 
         let rect = headline.getBoundingClientRect();
-        popup.style.top = `${rect.top + window.scrollY - 150}px`;
+        popup.style.top = `${rect.top + window.scrollY - 100}px`;
         console.log(popup.style.top + window.scrollY);
 
         popup.style.left = `${rect.left / 2}px`;
