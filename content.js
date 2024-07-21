@@ -16,7 +16,6 @@ articles.forEach((article) => {
     headline.appendChild(searchIcon);
 
     searchIcon.addEventListener('mouseover', (event) => {
-      console.log('Mouse over detected on:', headline.textContent);
       let title = (headline.textContent || '').trim();
       let teaser = article.querySelector('.title');
       let description = (article.textContent || 'none description').trim();
@@ -30,7 +29,6 @@ articles.forEach((article) => {
 
         let rect = headline.getBoundingClientRect();
         popup.style.top = `${rect.top + window.scrollY - 100}px`;
-        console.log(popup.style.top + window.scrollY);
 
         popup.style.left = `${rect.left / 2}px`;
       }
